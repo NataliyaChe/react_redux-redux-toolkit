@@ -17,7 +17,7 @@ export const animeListReducer = (state = initialState, action) => {
             return {
                 ...state,
                 currentPage: action.payload,
-
+                totalPages: state.totalPages,
             }
         default: 
             return state

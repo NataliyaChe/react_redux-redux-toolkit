@@ -13,7 +13,7 @@ function Main() {
     console.log('totalPages', totalPages);
 
     useEffect(() => {
-        dispatch(fetchAnimes())
+        dispatch(fetchAnimes(currentPage))
     }, [currentPage])
 
     return (

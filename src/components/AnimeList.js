@@ -16,7 +16,7 @@ function AnimeList() {
             <h2>Anime:</h2>
                 {/* <button onClick={() => dispatch(fetchAnimes())}>Get anime</button> */}
                 <div>List: {animes.map(anime =>
-                    <div>{anime.mal_id}</div>)}
+                    <div>{anime.title}</div>)}
                 </div>
         </>
     )

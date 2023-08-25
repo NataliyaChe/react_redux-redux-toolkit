@@ -6,7 +6,7 @@ function Pagination() {
   const totalPages = useSelector(state => state.totalPages)
   const dispatch = useDispatch()
   const changePage = (event) => {
-    const currentPage = event.selected
+    const currentPage = event.selected+1
     dispatch(setCurrentPage(currentPage))
     console.log('current page', currentPage);
   }
