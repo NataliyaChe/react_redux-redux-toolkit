@@ -1,0 +1,11 @@
+{
+    "users": [
+        { 
+            "id": 1, 
+            "login": "Nata", 
+            "email": "nata@meta.ua",
+            "password": "123456"
+        }
+    ]
+  }
+ 
