@@ -6,10 +6,10 @@ import { fetchAnimes } from '../actions/animeListAction';
 
 function Main() {
     const dispatch = useDispatch()
-    const animes = useSelector(state => state.animes)
-    const currentPage = useSelector(state => state.currentPage)
+    const animes = useSelector(state => state.animes.animes)
+    const currentPage = useSelector(state => state.animes.currentPage)
     console.log('animes', animes);
-    const totalPages = useSelector(state => state.totalPages)
+    const totalPages = useSelector(state => state.animes.totalPages)
     console.log('totalPages', totalPages);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ function Main() {
     }, [currentPage])
 
     return (
-        <div class='page-container'>
+        <div className='page-container'>
             <AnimeList/>
             <Pagination/>
 

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 function AnimeList() {
     // const dispatch = useDispatch()
-    const animes = useSelector(state => state.animes)
+    const animes = useSelector(state => state.animes.animes)
     // console.log('animes', animes);
 
     // useEffect(() => {

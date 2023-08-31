@@ -23,9 +23,6 @@ export const fetchAnimes = (currentPage) => async(dispatch) => {
         return dispatch(getAnimelist(animes))
 }
 
-// &page=${currentPage}
-// https://api.jikan.moe/v4/top/anime
-
 export const setCurrentPage = (currentPage) => {
     return {
         type: 'SET_CURRENT_PAGE',

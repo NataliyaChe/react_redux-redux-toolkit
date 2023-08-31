@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentPage } from '../actions/animeListAction';
 
 function Pagination() {
-  const totalPages = useSelector(state => state.totalPages)
+  const totalPages = useSelector(state => state.animes.totalPages)
   const dispatch = useDispatch()
   const changePage = (event) => {
     const currentPage = event.selected+1

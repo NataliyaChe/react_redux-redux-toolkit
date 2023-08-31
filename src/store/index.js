@@ -1,5 +1,11 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { animeListReducer } from '../reducers/animeListReducer'
+import { userReducer } from '../reducers/userReducer'
 import thunk from 'redux-thunk'
 
-export const store = createStore(animeListReducer, applyMiddleware(thunk))
+const rootReducer = combineReducers({
+    animes: animeListReducer,
+    user: userReducer
+})
+
+export const store = createStore(rootReducer, applyMiddleware(thunk))
