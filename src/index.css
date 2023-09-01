@@ -57,3 +57,11 @@ code {
 .nav__link {
   color: white;
 }
+
+.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
