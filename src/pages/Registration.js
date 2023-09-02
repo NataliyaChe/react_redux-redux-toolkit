@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function Registration() {
     const navigate = useNavigate()
     const [userName, setUserName] = useState('')
     const [userEmail, setUserEmail] = useState('')
     const [userPassword, setUserPassword] = useState('')
+    const isAuth = useSelector(state => state.user.currentUser)
 
     function addNewUser(event) {
         event.preventDefault()
@@ -15,7 +17,7 @@ function Registration() {
                 email: userEmail,
                 password: userPassword
             }
-        console.log('newUser', newUser);
+
         fetch(`http://localhost:3004/users`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -30,7 +32,7 @@ function Registration() {
         <div className='page-container'>
             <form className='form'>
                 <h1 className='title'>Register</h1>
-                <label className='label' for='username'>
+                <label className='label' htmlFor='username'>
                     Login
                 </label>
                 <input 
@@ -42,7 +44,7 @@ function Registration() {
                     value={userName}
                     onChange={(event) => setUserName(event.target.value)}
                 />
-                <label className='label' for='email'>
+                <label className='label' htmlFor='email'>
                     Email
                 </label>
                 <input 
@@ -54,7 +56,7 @@ function Registration() {
                     value={userEmail}
                     onChange={(event) => setUserEmail(event.target.value)}
                 />
-                <label className='label' for='password'>
+                <label className='label' htmlFor='password'>
                     Password
                 </label>
                 <input 
@@ -66,7 +68,7 @@ function Registration() {
                     value={userPassword}
                     onChange={(event) => setUserPassword(event.target.value)}
                 />
-                <label className='label' for='password_rpt'>
+                <label className='label' htmlFor='password_rpt'>
                     Confirm Password
                 </label>
                 <input 

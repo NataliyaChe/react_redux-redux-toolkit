@@ -7,7 +7,7 @@ function Login() {
     const [userEmail, setUserEmail] = useState('')
     const [userPassword, setUserPassword] = useState('')
     const dispatch = useDispatch()
-    const currentUser = useSelector(state => state.user.currentUser)
+    // const currentUser = useSelector(state => state.user.currentUser)
 
     async function getUserByEmail(event) { 
         event.preventDefault()
@@ -15,9 +15,9 @@ function Login() {
     }
 
     return (
-        <div class='page-container'>
+        <div className='page-container'>
             <form>
-                <label for='email' className='label'>
+                <label htmlFor='email' className='label'>
                     Email
                 </label>
                 <input 
@@ -29,7 +29,7 @@ function Login() {
                     className='form-input'
                     onChange={(event) => setUserEmail(event.target.value)}
                 />
-                <label className='label' for='password'>
+                <label className='label' htmlFor='password'>
                     Password
                 </label>
                 <input 
