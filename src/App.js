@@ -10,7 +10,6 @@ import { useSelector } from 'react-redux'
 
 function App() {
   const isAuth = useSelector(state => state.user.currentUser)
-  console.log('isAuth', isAuth);
 
   if(isAuth) {
     return (
