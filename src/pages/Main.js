@@ -7,11 +7,9 @@ import { setCurrentUser } from '../actions/userAction'
 
 function Main() {
     const dispatch = useDispatch()
-    const animes = useSelector(state => state.animes.animes)
     const currentPage = useSelector(state => state.animes.currentPage)
-    const totalPages = useSelector(state => state.animes.totalPages)
     const user = useSelector(state => state.user.currentUser)
-    console.log('main user', user.name);
+    console.log('main user', user)
 
     useEffect(() => {
         dispatch(fetchAnimes(currentPage))
@@ -20,7 +18,7 @@ function Main() {
 
     return (
         <div className='page-container'>
-            {user ? <h2>Hello, {user.name}!</h2> : <h2>{user.name}</h2> }
+            {user ? <h2>Hello, {user.name}!</h2> : <h2>Hello!</h2> }
             <AnimeList/>
             <Pagination/>
 

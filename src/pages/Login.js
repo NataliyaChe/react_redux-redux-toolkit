@@ -6,7 +6,6 @@ import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
     const navigate = useNavigate()
-    // const [matchUser, setMatchUser] = useState({})
     const [userEmail, setUserEmail] = useState('')
     const [userPassword, setUserPassword] = useState('')
     const dispatch = useDispatch()

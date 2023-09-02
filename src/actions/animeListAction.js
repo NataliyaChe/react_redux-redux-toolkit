@@ -18,8 +18,6 @@ export const getAnimelist = (payload) => {
 export const fetchAnimes = (currentPage) => async(dispatch) => {
         const data = await fetch(`https://api.jikan.moe/v4/top/anime?limit=25&page=${currentPage}`);
         const animes = await data.json();
-        console.log('animes reducer', animes);
-        console.log('currentPage reducer', currentPage);
         return dispatch(getAnimelist(animes))
 }
 

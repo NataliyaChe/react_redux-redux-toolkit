@@ -8,7 +8,8 @@ export const userReducer = (state = initialState, action) => {
     switch(action.type) {
         case GET_CURRENT_USER:
             return { 
-                ...state
+                ...state,
+                currentUser: action.payload,
             }
         case SET_CURRENT_USER:
             return { 
