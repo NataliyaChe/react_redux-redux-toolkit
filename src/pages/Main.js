@@ -18,10 +18,9 @@ function Main() {
 
     return (
         <div className='page-container'>
-            {user ? <h2>Hello, {user.name}!</h2> : <h2>Hello!</h2> }
+            <h2>Hello, {user.name}!</h2>
             <AnimeList/>
             <Pagination/>
-
         </div>
     )
 }

@@ -1,21 +1,17 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCurrentUser } from '../actions/userAction'
-import { useNavigate, Link } from "react-router-dom";
 
 
 function Login() {
-    const navigate = useNavigate()
     const [userEmail, setUserEmail] = useState('')
     const [userPassword, setUserPassword] = useState('')
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state.user.currentUser)
-    console.log('User', currentUser);
 
     async function getUserByEmail(event) { 
         event.preventDefault()
         dispatch(fetchCurrentUser(userEmail))
-        navigate('/')
     }
 
     return (

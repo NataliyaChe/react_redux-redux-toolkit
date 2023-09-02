@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { logoutUser } from '../actions/userAction'
 // import { setCurrentUser } from '../actions/userAction'
 
 function Header() {
-    const dispatch = useDispatch()
-    // const user = useSelector(state => state.user.currentUser)
-    // console.log('header user', user);
+    // const dispatch = useDispatch()
+    const user = useSelector(state => state.user.currentUser)
+    console.log('header user', user);
 
     // useEffect(() => {
     //     dispatch(setCurrentUser())
     // }, [])
 
     function logout() {
-        dispatch(logoutUser())
+        // dispatch(logoutUser())
         localStorage.removeItem('authorizedUser');
     }
 
@@ -38,7 +38,7 @@ function Header() {
                             Logout
                         </Link>
                     </li> */}
-                    <li >
+                    {/* <li >
                         <Link to="/login" className='link nav__link'>
                             Login
                         </Link>
@@ -47,7 +47,7 @@ function Header() {
                         <Link to="/registration" className='link nav__link'>
                             Registration
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="/" className='link nav__link' onClick={logout()}>
                             Logout
