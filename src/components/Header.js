@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { useEffect } from 'react'
 import { logoutUser } from '../actions/userAction'
 
 function Header() {
@@ -16,23 +15,24 @@ function Header() {
         <div className='header'>
             <nav className='header__nav'>
                 <Link to="/" className='header__title link'>Animelist</Link>
-                {isAuth ? 
-                    <button className='link nav__link' onClick={logout}>
-                    Logout
-                </button> :
-                
-                <ul className='header__list'>
-                    <li className='header__item'>
-                        <Link to="/login" className='link nav__link'>
-                            Login
-                        </Link>
-                    </li>
-                    <li className='header__item'>
-                        <Link to="/registration" className='link nav__link'>
-                            Registration
-                        </Link>
-                    </li>
-                </ul>}
+                {
+                    isAuth ? 
+                        <span className='link nav__link header__item' onClick={logout}>
+                            Logout
+                        </span> :
+                    <ul className='header__list'>
+                        <li className='header__item'>
+                            <Link to="/login" className='link nav__link'>
+                                Login
+                            </Link>
+                        </li>
+                        <li className='header__item'>
+                            <Link to="/registration" className='link nav__link'>
+                                Registration
+                            </Link>
+                        </li>
+                    </ul>
+                }
             </nav>
         </div>
     )
