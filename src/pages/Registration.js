@@ -1,13 +1,11 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
 function Registration() {
     const navigate = useNavigate()
     const [userName, setUserName] = useState('')
     const [userEmail, setUserEmail] = useState('')
     const [userPassword, setUserPassword] = useState('')
-    const isAuth = useSelector(state => state.user.currentUser)
 
     function addNewUser(event) {
         event.preventDefault()

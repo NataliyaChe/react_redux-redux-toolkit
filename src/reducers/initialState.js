@@ -1,7 +1,6 @@
 export const initialState = {
     animes: [],
-    users: [],
-    currentUser: {},
+    currentUser: null,
     currentPage: 1,
     totalPages: 100,
     animesPerPage: 25,
