@@ -24,8 +24,6 @@ function Registration() {
         navigate('/login')
     }
 
-
-
     return (
         <div className='page-container auth-container'>
             <form className='form'>

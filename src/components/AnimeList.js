@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 function AnimeList() {
     const animes = useSelector(state => state.animes.animes)
