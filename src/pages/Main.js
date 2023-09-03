@@ -8,7 +8,6 @@ function Main() {
     const dispatch = useDispatch()
     const currentPage = useSelector(state => state.animes.currentPage)
     const user = useSelector(state => state.user.currentUser)
-    console.log('currentPage', currentPage);
 
     useEffect(() => {
         dispatch(fetchAnimes(currentPage))
@@ -16,7 +15,7 @@ function Main() {
 
     return (
         <div className='page-container'>
-            <h2>Hello, {user.name}!</h2>
+            <h2 className="title">Hello, {user.name}!</h2>
             <AnimeList/>
             <Pagination/>
         </div>

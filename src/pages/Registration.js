@@ -27,64 +27,65 @@ function Registration() {
 
 
     return (
-        <div className='page-container'>
+        <div className='page-container auth-container'>
             <form className='form'>
-                <h1 className='title'>Register</h1>
-                <label className='label' htmlFor='username'>
-                    Login
-                </label>
-                <input 
-                    type='text' 
-                    name='username'
-                    id='username' 
-                    placeholder='Your Name'
-                    className='form-input' 
-                    value={userName}
-                    onChange={(event) => setUserName(event.target.value)}
-                />
-                <label className='label' htmlFor='email'>
-                    Email
-                </label>
-                <input 
-                    type='email' 
-                    name='email'
-                    id='email' 
-                    placeholder='Your Email'
-                    className='form-input'
-                    value={userEmail}
-                    onChange={(event) => setUserEmail(event.target.value)}
-                />
-                <label className='label' htmlFor='password'>
-                    Password
-                </label>
-                <input 
-                    type='password' 
-                    name='password'
-                    id='password' 
-                    placeholder='Password'
-                    className='form-input'
-                    value={userPassword}
-                    onChange={(event) => setUserPassword(event.target.value)}
-                />
-                <label className='label' htmlFor='password_rpt'>
-                    Confirm Password
-                </label>
-                <input 
-                    type='password' 
-                    name='password_rpt'
-                    id='password_rpt' 
-                    placeholder='Repeat Password'
-                    className='form-input'
-                />
-                <button type='submit' className='button' onClick={addNewUser}>
-                    Register
-                </button>
-                <div className="container signin">
-                    <Link to='/login' className='link'>
-                        Already registered? Sign in
-                    </Link>
+                <div className='form-container'>
+                    <label className='label' htmlFor='username'>
+                        Login
+                    </label>
+                    <input 
+                        type='text' 
+                        name='username'
+                        id='username' 
+                        placeholder='Your Name'
+                        className='form-input' 
+                        value={userName}
+                        onChange={(event) => setUserName(event.target.value)}
+                    />
+                    <label className='label' htmlFor='email'>
+                        Email
+                    </label>
+                    <input 
+                        type='email' 
+                        name='email'
+                        id='email' 
+                        placeholder='Your Email'
+                        className='form-input'
+                        value={userEmail}
+                        onChange={(event) => setUserEmail(event.target.value)}
+                    />
+                    <label className='label' htmlFor='password'>
+                        Password
+                    </label>
+                    <input 
+                        type='password' 
+                        name='password'
+                        id='password' 
+                        placeholder='Password'
+                        className='form-input'
+                        value={userPassword}
+                        onChange={(event) => setUserPassword(event.target.value)}
+                    />
+                    <label className='label' htmlFor='password_rpt'>
+                        Confirm Password
+                    </label>
+                    <input 
+                        type='password' 
+                        name='password_rpt'
+                        id='password_rpt' 
+                        placeholder='Repeat Password'
+                        className='form-input'
+                    />
+                    <button type='submit' className='button' onClick={addNewUser}>
+                        Register
+                    </button>
                 </div>
             </form>
+            <div className="container-link">
+                <Link to='/' className='link'>
+                    Already registered? Sign in
+                </Link>
+            </div>
         </div>
     )
 }

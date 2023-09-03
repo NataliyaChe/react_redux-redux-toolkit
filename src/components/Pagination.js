@@ -11,7 +11,7 @@ function Pagination() {
   }
 
     return (
-      <>
+      <div className='pagination'>
         <ReactPaginate
           pageClassName="page-item"
           pageLinkClassName="page-link"
@@ -31,7 +31,7 @@ function Pagination() {
           previousLabel="<"
           renderOnZeroPageCount={null}
         />
-      </>
+      </div>
     );
   }
   

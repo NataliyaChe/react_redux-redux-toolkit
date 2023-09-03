@@ -5,8 +5,8 @@ function AnimeList() {
 
     return (
         <>
-            <h2>Anime:</h2>
-                <div>List: {animes.map(anime =>
+            <h2 className="subtitle">Anime:</h2>
+                <div>{animes.map(anime =>
                     <div key={anime.mal_id}>{anime.title}</div>)}
                 </div>
         </>
