@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1693511499200,
+      "login": "Nata",
+      "email": "nata@meta.ua",
+      "password": "123456"
+    },
+    {
+      "id": 1693511499206,
+      "name": "Tilda",
+      "email": "tilda@meta.ua",
+      "password": "12345"
+    },
+    {
+      "id": 1693521817348,
+      "name": "Maar",
+      "email": "maar@meta.ua",
+      "password": "1234"
+    }
+  ]
+}

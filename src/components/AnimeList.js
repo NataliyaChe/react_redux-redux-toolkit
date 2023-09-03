@@ -1,9 +1,14 @@
+import { useSelector } from 'react-redux'
 
 function AnimeList() {
+    const animes = useSelector(state => state.animes.animes)
+
     return (
         <>
-            <h2>Anime:</h2>
-            
+            <h2 className="subtitle">Anime:</h2>
+                <div>{animes.map(anime =>
+                    <div key={anime.mal_id}>{anime.title}</div>)}
+                </div>
         </>
     )
 }
