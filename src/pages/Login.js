@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { fetchCurrentUser } from '../actions/userAction'
 
 
@@ -7,7 +7,6 @@ function Login() {
     const [userEmail, setUserEmail] = useState('')
     const [userPassword, setUserPassword] = useState('')
     const dispatch = useDispatch()
-    // const currentUser = useSelector(state => state.user.currentUser)
 
     async function getUserByEmail(event) { 
         event.preventDefault()

@@ -3,18 +3,16 @@ import Pagination from '../components/Pagination'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAnimes } from '../actions/animeListAction';
-import { setCurrentUser } from '../actions/userAction'
 
 function Main() {
     const dispatch = useDispatch()
     const currentPage = useSelector(state => state.animes.currentPage)
     const user = useSelector(state => state.user.currentUser)
-    console.log('main user', user)
+    console.log('currentPage', currentPage);
 
     useEffect(() => {
         dispatch(fetchAnimes(currentPage))
-        dispatch(setCurrentUser())
-    }, [currentPage])
+    }, [currentPage, dispatch])
 
     return (
         <div className='page-container'>

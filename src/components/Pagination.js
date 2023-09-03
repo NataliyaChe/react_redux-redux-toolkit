@@ -8,7 +8,6 @@ function Pagination() {
   const changePage = (event) => {
     const currentPage = event.selected+1
     dispatch(setCurrentPage(currentPage))
-    console.log('current page', currentPage);
   }
 
     return (

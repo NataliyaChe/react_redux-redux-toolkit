@@ -7,7 +7,6 @@ import Login from './pages/Login'
 import Registration from './pages/Registration'
 import { useSelector } from 'react-redux'
 
-
 function App() {
   const isAuth = useSelector(state => state.user.currentUser)
 

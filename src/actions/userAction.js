@@ -12,13 +12,6 @@ export const fetchCurrentUser = (userEmail) => async(dispatch) => {
     return dispatch(getCurrentUser(user[0]))
 }
 
-export const setCurrentUser = () => {
-    return {
-        type: 'SET_CURRENT_USER',
-        payload: JSON.parse(localStorage.getItem('authorizedUser'))
-    }
-}
-
 export const logoutUser = () => {
     return {
         type: 'LOGOUT',
